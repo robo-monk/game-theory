@@ -30,4 +30,8 @@ for position in range(0, NUM_OF_COINS):
     winning_player = get_winning_player(position, analysis)
     analysis.append(winning_player)
 
-print(analysis)
+
+print("Position | Result")
+print("-----------------")
+for idx, result in enumerate(analysis):
+    print(f"{idx:8} | {result}")
