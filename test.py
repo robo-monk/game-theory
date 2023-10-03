@@ -2,12 +2,13 @@
 # If there's a move that leads to a P-position, then the current position is an N-position.
 # If all moves lead to N-positions, then the current position is a P-position.
 
-NUM_OF_COINS = 21
-MAX_COINS_PER_TURN = 3
+NUM_OF_COINS = 31
+MIN_COINS_PER_TURN = 1
+MAX_COINS_PER_TURN = 6
 MISERE = False
 
 def find_legal_moves(coins: int):
-    return [i for i in range(1, min(coins, MAX_COINS_PER_TURN) + 1)]
+    return [i for i in range(MIN_COINS_PER_TURN, min(coins, MAX_COINS_PER_TURN) + 1)]
 
 
 def is_game_over(coins: int):
