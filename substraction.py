@@ -56,7 +56,7 @@ def sprague_grundy(pile: int):
 
 
 analysis: list[str] = []
-for position in range(0, PILE_SIZE):
+for position in range(0, PILE_SIZE+1):
     winning_player = get_winning_player(position, analysis)
     analysis.append(winning_player)
 
